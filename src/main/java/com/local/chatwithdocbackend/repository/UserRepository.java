@@ -1,9 +1,11 @@
 package com.local.chatwithdocbackend.repository;
 
 import com.local.chatwithdocbackend.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
 
-public interface UserRepository {
+public interface UserRepository extends JpaRepository<User, String> {
 
-    User save(User user);
+    Optional<User> findByEmail(String email);
 
 }
