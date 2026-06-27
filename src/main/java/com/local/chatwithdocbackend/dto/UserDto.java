@@ -1,18 +1,22 @@
 package com.local.chatwithdocbackend.dto;
 
+import com.local.chatwithdocbackend.entity.Role;
+
 public class UserDto {
 
     private String id;
     private String name;
     private String email;
+    private Role role;
 
     public UserDto() {
     }
 
-    public UserDto(String id, String name, String email) {
+    public UserDto(String id, String name, String email, Role role) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.role = role;
     }
 
     public String getId() {
@@ -37,5 +41,13 @@ public class UserDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }
